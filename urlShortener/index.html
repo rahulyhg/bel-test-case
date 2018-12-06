@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Url Shortener</title>
+</head>
+<body>
+    <!-- Если запустить приложение не на встроенном сервере php, то директива nginx try files
+      может помешать корректной работе программы-->
+    <form name="url-form" id="js-url-form">
+        <label for="js-url">Введите URL:</label>
+        <!-- удостоверимся, что ввод не пустой средствами html5,
+         а также что тип ввода - это ссылка -->
+        <input type="url" name="url" id="js-url"
+               placeholder="http://example.com"
+               required
+               maxlength="300"
+               >
+        <button type="submit">Укоротить URL</button>
+    </form>
+    <ul id="js-url-list"></ul>
+    <script src="main.js"></script>
+</body>
+</html>
